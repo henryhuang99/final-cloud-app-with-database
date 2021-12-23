@@ -67,7 +67,7 @@
             <!-- <HINT> For each question choice, you may create a checkbox input like
             <input type="check" name="choice_{{choice.id}}" id="{{choice.id}}" ...>
             -->
-            <form id="questionform" action="point to a submit view" method="post">
+            <form id="questionform"  action= "{% url "onlinecourse:submit" course.pk%}" method="post">
                 {% for lesson in course.lesson_set.all %}
                     {% for question in lesson.question_set.all %}
                         <div class="card mt-1">
